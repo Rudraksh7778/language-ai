@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Language Learning App</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    select, textarea, input[type="text"], button {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 16px;
+    }
+    .response {
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #eef;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>AI Language Tutor</h1>
+
+    <label for="language">Choose a language to learn:</label>
+    <select id="language">
+      <option value="spanish">Spanish</option>
+      <option value="french">French</option>
+      <option value="german">German</option>
+      <option value="japanese">Japanese</option>
+    </select>
+
+    <label for="question">Ask something or start a conversation:</label>
+    <input type="text" id="question" placeholder="Type your question here...">
+
+    <button onclick="askAI()">Send</button>
+
+    <div class="response" id="responseBox">
+      AI's response will appear here.
+    </div>
+  </div>
+
+  <script>
+    function askAI() {
+      const language = document.getElementById('language').value;
+      const question = document.getElementById('question').value;
+      const responseBox = document.getElementById('responseBox');
+
+      // Simulated AI response
+      responseBox.innerText = `Simulated response for learning ${language} based on: "${question}"`;
+
+      // In a real app, here you’d send the question to a backend AI API
+    }
+  </script>
+
+</body>
+</html>
